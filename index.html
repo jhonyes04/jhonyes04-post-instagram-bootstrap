@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Galería</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand d-flex align-items-baseline fs-4">
+                <i class="fab fa-instagram me-2"></i>
+                <h4 class="mb-0">Instagram</h4>
+            </a>
+
+            <div class="d-flex ms-auto">
+                <button type="button"
+                        class="btn btn-success me-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal">
+                    Create new post
+                </button>
+
+                <div class="btn-group">
+                    <button class="btn btn-secondary dropdown-toggle"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        <i class="fas fa-cog"></i>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a href="#" class="dropdown-item">Profile</a></li>
+                        <li><a href="#" class="dropdown-item">Accesibility</a></li>
+                        <li><a href="#" class="dropdown-item">Privacy and Data</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="#" class="dropdown-item text-danger">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- FIN Navbar -->
+
+    <!-- Modal -->
+    <div id="modal" class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create a new post</h5>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="close">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="caption-text" class="col-form-label">Caption:</label>
+                            <textarea id="caption-text" class="form-control" placeholder="Add the caption of your post here"></textarea>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fas fa-camera me-3"></i>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN Modal -->
+
+    <div class="container mt-5">
+        <!-- Tabs de navegación -->
+        <ul class="nav nav-pills mb-4 d-flex justify-content-center" role="tablist">
+            <li class="nav-item">
+                <a href="#grid-view" class="nav-link" data-bs-toggle="pill">
+                    <i class="fa-solid fa-table"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#list-view" class="nav-link active" data-bs-toggle="pill">
+                    <i class="fa-solid fa-list"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- FIN Tabs de navegación -->
+
+        <!-- Contenido de los tabs -->
+        <div class="tab-content">
+            <!-- Cuadrícula -->
+            <div class="tab-pane fade" id="grid-view">
+                <div class="row g-2 mb-2">
+                    <div class="col-md-4 col-sm-6">
+                        <img src="img/Imagen01.jpg" alt="Imagen 1" class="card-img-top">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="img/Imagen02.jpg" alt="Imagen 2" class="card-img-top">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="img/Imagen03.jpg" alt="Imagen 3" class="card-img-top">
+                    </div>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div class="col-md-4 col-sm-6">
+                        <img src="img/Imagen04.jpg" alt="Imagen 4" class="card-img-top">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="img/Imagen05.jpg" alt="Imagen 5" class="card-img-top">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="img/Imagen06.jpg" alt="Imagen 6" class="card-img-top">
+                    </div>
+                </div>
+                <div class="row g-2 mb-2">
+                    <div class="col-md-4 col-sm-6">
+                        <img src="img/Imagen07.jpg" alt="Imagen 7" class="card-img-top">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="img/Imagen08.jpg" alt="Imagen 8" class="card-img-top">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="img/Imagen09.jpg" alt="Imagen 9" class="card-img-top">
+                    </div>
+                </div>
+            </div>
+            <!-- FIN Cuadrícula -->
+            
+            <!-- Lista (por defecto) -->
+            <div id="list-view" class="tab-pane fade w-75 mx-auto show active">
+                <!-- Imagen 1 -->
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">My Crazy dog Spark!</h5>
+                        <span class="text-muted">08/26</span>
+                    </div>
+
+                    <img src="img/Imagen01.jpg" alt="Imagen 1" class="card-img-top">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="card-text fw-bold mb-0">204 Likes</p>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Imagen 1 -->
+
+                <!-- Imagen 2 -->
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">The greatness of Croatia</h5>
+                        <span class="text-muted">04/09</span>
+                    </div>
+
+                    <img src="img/Imagen02.jpg" alt="Imagen 2" class="card-img-top">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="card-text fw-bold mb-0">26985 Likes</p>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Imagen 2 -->
+                
+                <!-- Imagen 3 -->
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Amazing GOAL by Cristiano!</h5>
+                        <span class="text-muted">06/10</span>
+                    </div>
+
+                    <img src="img/Imagen03.jpg" alt="Imagen 3" class="card-img-top">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="card-text fw-bold mb-0">204 Likes</p>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Imagen 3 -->
+
+                <!-- Imagen 4 -->
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Lorem ipsum dolor sit.</h5>
+                        <span class="text-muted">08/26</span>
+                    </div>
+
+                    <img src="img/Imagen04.jpg" alt="Imagen 4" class="card-img-top">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="card-text fw-bold mb-0">204 Likes</p>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Imagen 4 -->
+
+                <!-- Imagen 5 -->
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Lorem ipsum dolor sit.</h5>
+                        <span class="text-muted">08/26</span>
+                    </div>
+
+                    <img src="img/Imagen05.jpg" alt="Imagen 5" class="card-img-top">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="card-text fw-bold mb-0">204 Likes</p>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Imagen 5 -->
+
+                <!-- Imagen 6 -->
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Lorem ipsum dolor sit.</h5>
+                        <span class="text-muted">08/26</span>
+                    </div>
+
+                    <img src="img/Imagen06.jpg" alt="Imagen 6" class="card-img-top">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="card-text fw-bold mb-0">204 Likes</p>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Imagen 6 -->
+
+                <!-- Imagen 7 -->
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Lorem ipsum dolor sit.</h5>
+                        <span class="text-muted">08/26</span>
+                    </div>
+
+                    <img src="img/Imagen07.jpg" alt="Imagen 7" class="card-img-top">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="card-text fw-bold mb-0">204 Likes</p>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Imagen 7 -->
+
+                <!-- Imagen 8 -->
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Lorem ipsum dolor sit.</h5>
+                        <span class="text-muted">08/26</span>
+                    </div>
+
+                    <img src="img/Imagen08.jpg" alt="Imagen 8" class="card-img-top">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="card-text fw-bold mb-0">204 Likes</p>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Imagen 8 -->
+
+                <!-- Imagen 9 -->
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Lorem ipsum dolor sit.</h5>
+                        <span class="text-muted">08/26</span>
+                    </div>
+
+                    <img src="img/Imagen09.jpg" alt="Imagen 9" class="card-img-top">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="card-text fw-bold mb-0">204 Likes</p>
+                            <p class="card-text">This is an example of a very good photo that you can post on instagram.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Imagen 9 -->
+            </div>
+            <!-- FIN Lista (por defecto) -->
+        </div>
+        <!-- FIN Contenido de los tabs -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
